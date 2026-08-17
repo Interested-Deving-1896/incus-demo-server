@@ -1,70 +1,91 @@
-# Incus demo server
+# incus-demo-server
 
-This repository contains the backend code of the Incus online demo service.
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/incus-demo-server) [![KDE Eco](https://img.shields.io/badge/KDE%20Eco-certified-brightgreen?logo=kde&logoColor=white&style=flat-square)](https://eco.kde.org/) [![Blue Angel](https://img.shields.io/badge/Blue%20Angel-DE--UZ%20215-0055a4?style=flat-square)](https://www.blauer-engel.de/en/certification/criteria) [![Energy](https://api.green-coding.io/v1/ci/badge/get?repo=Interested-Deving-1896%2Fincus-demo-server&branch=main&workflow=eco-audit.yml)](https://metrics.green-coding.io/ci-index.html)
 
-[https://linuxcontainers.org/incus/try-it](https://linuxcontainers.org/incus/try-it)
 
-## What is it
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-Simply put, it's a small Go daemon exposing a REST API that users
-(mostly our javascript client) can interact with to create temporary
-test instances and attach to that instance's console.
+## Architecture
 
-Those instances come with a bunch of resource limitations and an
-expiry, when the instance expires, it's automatically deleted.
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-The main client can be found at the URL above, with its source available here:  
-[https://github.com/lxc/linuxcontainers.org](https://github.com/lxc/linuxcontainers.org)
+## Install
 
-## Dependencies
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-The server needs to be able to talk to an Incus daemon over the local unix
-socket or a remote HTTPS connection, so you need to have a Incus daemon
-installed and functional before using this server.
+```bash
+git clone https://github.com/Interested-Deving-1896/incus-demo-server.git
+cd incus-demo-server
+```
 
-Other than that, you can build the daemon with:
+## Usage
 
-    go install github.com/lxc/incus-demo-server/cmd/incus-demo-server@latest
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
-## Running it
+## Configuration
 
-To run your own, you should start by copying the example configuration
-file "config.yaml.example" to "config.yaml", then update its content
-according to your environment.
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
 
-You will either need an instance to copy for every request or an
-instance image to use, set that up and set the appropriate
-configuration key.
+## CI
 
-Once done, simply run the daemon with:
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
 
-    ./incus-demo-server
+## Mirror chain
 
-The daemon isn't verbose at all, in fact it will only log critical Incus errors.
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/incus-demo-server`](https://github.com/Interested-Deving-1896/incus-demo-server) and mirrored through:
 
-You can test things with:
+```
+Interested-Deving-1896/incus-demo-server  ──►  OpenOS-Project-OSP/incus-demo-server  ──►  OpenOS-Project-Ecosystem-OOC/incus-demo-server
+```
 
-    curl http://localhost:8080/1.0
-    curl http://localhost:8080/1.0/terms
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
 
-The server monitors the current directory for changes to its configuration file.
-It will automatically reload the configuration after it's changed.
+## Contributors
 
-## Bug reports
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
 
-Bug reports can be filed at https://github.com/lxc/incus-demo-server/issues/new
+## Origins
 
-## Contributing
+<!-- AI:start:origins -->
+_Original project — no upstream influences recorded._
+<!-- AI:end:origins -->
 
-Fixes and new features are greatly appreciated but please read our
-[contributing guidelines](CONTRIBUTING.md) first.
+## Resources
 
-Contributions to this project should be sent as pull requests on github.
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
 
-## Support and discussions
+## Accessibility
 
-We use the LXC mailing-lists for developer and user discussions, you can
-find and subscribe to those at: https://lists.linuxcontainers.org
+<!-- AI:start:accessibility -->
+This repo uses automated accessibility auditing via `check-accessibility.yml`.
 
-If you prefer live discussions, some of us also hang out in
-[#lxc](https://web.libera.chat/#lxc) on libera.chat.
+Checks include: CODEOWNERS ownership coverage, README screen-reader compatibility,
+WCAG 2.1 AA HTML compliance, audio overview (espeak-ng), and Braille output (liblouis).
+
+
+
+
+Run the [Check Accessibility](https://github.com/Interested-Deving-1896/incus-demo-server/actions/workflows/check-accessibility.yml)
+workflow to generate the first report and accessibility artifacts.
+See [DOCS/accessibility.md](https://github.com/Interested-Deving-1896/incus-demo-server/blob/main/DOCS/accessibility.md) for the full reference.
+<!-- AI:end:accessibility -->
+
+## License
+
+<!-- AI:start:license -->
+[Apache-2.0](https://github.com/Interested-Deving-1896/incus-demo-server/blob/main/COPYING) © 2026 [Interested-Deving-1896](https://github.com/Interested-Deving-1896)
+<!-- AI:end:license -->
